@@ -10,7 +10,7 @@ io.on('connection', (socket) => {
     console.log('A user connected');
 
     socket.on('send-message', (msg) => {
-        io.emit('receive-message', {username: socket.id, message: msg});
+        io.emit('receive-message', { username: socket.id, message: msg });
     });
 
     socket.on('disconnect', () => {

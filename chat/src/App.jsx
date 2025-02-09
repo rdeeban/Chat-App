@@ -9,7 +9,7 @@ export default function App() {
 
     useEffect(() => {
         socket.on('receive-message', (msg) => {
-            setMessages([...messages, msg.username + " says " + msg.message]);
+            setMessages([...messages, msg.username + ": " + msg.message]);
         });
 
         return () => {
